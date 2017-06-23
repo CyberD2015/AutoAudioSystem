@@ -5,7 +5,7 @@ Works on all RPi boards
 
 Setup
 
-To compile this project use commands below:
+To prepare this project use commands below:
 ```
 sudo apt-get install nodejs
 sudo apt-get install npm
