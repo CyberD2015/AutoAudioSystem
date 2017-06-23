@@ -1,4 +1,4 @@
-#AutoAudioSystem
+AutoAudioSystem
 
 Use Raspberry Pi as FM transmitter. 
 Works on all RPi boards
