@@ -13,6 +13,37 @@
     src: url(fonts/ms.ttf);
 }
 
+.header {
+    background-color: #ecf0f1;
+    width: 100%;
+    height: 5vw;
+}
+
+.icon {
+    cursor: pointer;
+    margin-top: 0.5vw;
+    margin-left: 1vw;
+    height: 4vw;
+    width: 4vw;
+}
+
+.iconToggle {
+    cursor: pointer;
+    border-radius: 4vw;
+    margin-top: 0.5vw;
+    margin-left: 1vw;
+    height: 4vw;
+    width: 4vw;
+}
+
+.off {
+    background-color: #ecf0f1;
+}
+
+.on {
+    background-color: #bdc3c7;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -69,5 +100,4 @@ a {
     color: #ecf0f1;
     font-size: 2vw;
     font-family: mr;
-    cursor: pointer;
 }

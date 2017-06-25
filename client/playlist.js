@@ -1,5 +1,6 @@
-var socket = io();
 var playlist = [];
+var socket = io();
+
 socket.on("conMade", function () {
     console.log('comMade');
 });
@@ -11,14 +12,33 @@ socket.on('playlistResponse', function (data) {
 })
 
 function displayPlaylist() {
-    document.getElementById('list').innerHTML = "";
+    document.getElementById('playlist').innerHTML = "";
     console.log('displaying playlist');
     for (var i = 0; i < playlist.length; i++) {
-        document.getElementById('list').innerHTML += "<div class='song' onClick= 'play(" + '"' + playlist[i] + '"' + ")'id='song" + i + "'>" + playlist[i] + "</div>";
+        document.getElementById('playlist').innerHTML += "<div class='song' onClick= 'play(" + '"' + playlist[i] + '"' + ")'id='song" + i + "'>" + playlist[i] + "</div>";
     }
 }
 
 function play(song) {
     console.log('playing song ' + song);
     socket.emit('songRequest', song);
+}
+document.getElementById('back').onclick = function () {
+    socket.emit('back');
+}
+document.getElementById('forward').onclick = function () {
+    socket.emit('forward');
+}
+document.getElementById('playpause').onclick = function () {
+    socket.emit('playpause');
+}
+document.getElementById('list').onclick = function () {
+    socket.emit('list');
+    document.getElementById('shuffle').className = "iconToggle off";
+    document.getElementById('list').className = "iconToggle on";
+}
+document.getElementById('shuffle').onclick = function () {
+    socket.emit('shuffle');
+    document.getElementById('list').className = "iconToggle off";
+    document.getElementById('shuffle').className = "iconToggle on";
 }
