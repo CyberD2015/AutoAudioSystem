@@ -9,7 +9,7 @@ To prepare this project use commands below:
 ```
 sudo apt-get install nodejs
 sudo apt-get install npm
-sudo apt-get install mpg123
+sudo apt-get install sox
 npm install express
 npm install socket.io
 npm install shelljs
